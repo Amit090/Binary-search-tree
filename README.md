@@ -1,12 +1,12 @@
 # Binary-search-tree
 
 import java.util.Scanner;
+
 public class Main
 {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
-		
+	
 		int location=-1;
 		Scanner sc = new Scanner(System.in);
 	    int n = sc.nextInt();
@@ -17,25 +17,27 @@ public class Main
 	    
 	    location = BST(arr,0,9,item);
 	    System.out.println("LOCATION = "+location);
-}
-public static int BST(int arr[],int beg,int end,int item)
-{
-    int mid;
-    if(end>=beg)
-    {
-        mid=(beg+end)/2;
-        if(arr[mid]==item)
-            return mid+1;
+	}
+
+	public static int BST(int arr[],int beg,int end,int item)
+	{
+    		int mid;
+    		if(end>=beg)
+    		{
+        		mid=(beg+end)/2;
+        		
+			if(arr[mid]==item)
+            			return mid+1;
             
-        else if(arr[mid]>item)
-            return BST(arr,beg,mid-1,item);
+        		else if(arr[mid]>item)
+            			return BST(arr,beg,mid-1,item);
             
-        else 
-            return BST(arr,mid+1,end,item);
-    }        
+       			else 
+            			return BST(arr,mid+1,end,item);
+    		}        
         
             return -1;
     
-}
 	}
+}
 
