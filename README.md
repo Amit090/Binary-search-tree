@@ -7,8 +7,8 @@ public class Main
 
 	public static void main(String[] args) {
 	
-		int location=-1;
-		Scanner sc = new Scanner(System.in);
+	    int location=-1;
+            Scanner sc = new Scanner(System.in);
 	    int n = sc.nextInt();
 	    int arr[] = new int [100];
 	    for(int i=0;i<n;i++)
